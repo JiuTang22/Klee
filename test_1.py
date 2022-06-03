@@ -99,8 +99,4 @@ class Test_1(unittest.TestCase):
             print(e)
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     unittest.main()
-=======
-    unittest.main()
->>>>>>> 0a4118bd076ad652fb8ad4dd5d592cc48f0a88b1
