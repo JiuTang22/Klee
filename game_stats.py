@@ -18,18 +18,18 @@ class GameStats:
         self.load_high_score()
 
 	def save_high_score(self):
-		f = open("high_score.pkl",'wb')
-		pickle.dump(str(self.high_score),f,0)
-		f.colse()
+	    f = open("high_score.pkl",'wb')
+	    pickle.dump(str(self.high_score),f,0)
+	    f.colse()
     
 	def load_high_score(self):
-		f = open("high_score.pkl",'rb')
-		try:
-            str_high_score = pickle.load(f)
-            self.high_score = int(str_high_score)
-        except EOFError:
-            self.high_score = 0
-        finally:
-            f.colse()    
+	    f = open("high_score.pkl",'rb')
+	    try:
+                str_high_score = pickle.load(f)
+                self.high_score = int(str_high_score)
+            except EOFError:
+                self.high_score = 0
+            finally:
+                f.colse()    
 
     
