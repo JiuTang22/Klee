@@ -1,10 +1,12 @@
 import pygame
+from pygame.sprite import Sprite
 
 # 管理飞船的类
 class Ship:
 
     # 初始化飞船并设置其初始位置
     def __init__(self,ai_game):
+        super().__init__()
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         self.screen_rect = ai_game.screen.get_rect()
@@ -37,3 +39,8 @@ class Ship:
     # 在指定位置绘制飞船
     def blitme(self):
         self.screen.blit(self.image,self.rect)
+
+    # 让飞船在屏幕底端居中
+    def center_ship(self):
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)
